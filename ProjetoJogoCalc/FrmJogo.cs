@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoJogoCalc
 {
-    public partial class Form1 : Form
+    public partial class ProjetoJogoCalc : Form
     {
-        public Form1()
+        public ProjetoJogoCalc()
         {
             InitializeComponent();
         }
