@@ -130,4 +130,7 @@
   <data name="2026_04_Oka_Sho1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2026_04_Oka_Sho.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lock_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

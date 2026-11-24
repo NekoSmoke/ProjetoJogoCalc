@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GbxContas = new System.Windows.Forms.GroupBox();
+            this.Conta1 = new System.Windows.Forms.Label();
             this.GbxMenu = new System.Windows.Forms.GroupBox();
             this.BtnVoltarMenu = new System.Windows.Forms.Button();
             this.BtnMusica = new System.Windows.Forms.Button();
@@ -54,25 +55,23 @@
             this.NmrVezes = new System.Windows.Forms.Button();
             this.NmrDEL = new System.Windows.Forms.Button();
             this.GbxCalcTest = new System.Windows.Forms.GroupBox();
-            this.Test7 = new System.Windows.Forms.Button();
-            this.Test8 = new System.Windows.Forms.Button();
-            this.Test9 = new System.Windows.Forms.Button();
-            this.Test4 = new System.Windows.Forms.Button();
-            this.Test5 = new System.Windows.Forms.Button();
-            this.Test6 = new System.Windows.Forms.Button();
-            this.Test1 = new System.Windows.Forms.Button();
-            this.Test2 = new System.Windows.Forms.Button();
-            this.Test3 = new System.Windows.Forms.Button();
-            this.Test0 = new System.Windows.Forms.Button();
-            this.TestVirgula = new System.Windows.Forms.Button();
-            this.TestAC = new System.Windows.Forms.Button();
-            this.TestMult = new System.Windows.Forms.Button();
-            this.TestDiv = new System.Windows.Forms.Button();
-            this.TestMais = new System.Windows.Forms.Button();
-            this.TestMenos = new System.Windows.Forms.Button();
             this.TesteIgual = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Conta1 = new System.Windows.Forms.Label();
+            this.TestMenos = new System.Windows.Forms.Button();
+            this.TestMais = new System.Windows.Forms.Button();
+            this.TestDiv = new System.Windows.Forms.Button();
+            this.TestMult = new System.Windows.Forms.Button();
+            this.TestAC = new System.Windows.Forms.Button();
+            this.TestVirgula = new System.Windows.Forms.Button();
+            this.Test0 = new System.Windows.Forms.Button();
+            this.Test3 = new System.Windows.Forms.Button();
+            this.Test2 = new System.Windows.Forms.Button();
+            this.Test1 = new System.Windows.Forms.Button();
+            this.Test6 = new System.Windows.Forms.Button();
+            this.Test5 = new System.Windows.Forms.Button();
+            this.Test4 = new System.Windows.Forms.Button();
+            this.Test9 = new System.Windows.Forms.Button();
+            this.Test8 = new System.Windows.Forms.Button();
+            this.Test7 = new System.Windows.Forms.Button();
             this.GbxContas.SuspendLayout();
             this.GbxMenu.SuspendLayout();
             this.GbxCalc.SuspendLayout();
@@ -88,6 +87,15 @@
             this.GbxContas.TabIndex = 0;
             this.GbxContas.TabStop = false;
             this.GbxContas.Text = "Equações:";
+            // 
+            // Conta1
+            // 
+            this.Conta1.AutoSize = true;
+            this.Conta1.Location = new System.Drawing.Point(30, 36);
+            this.Conta1.Name = "Conta1";
+            this.Conta1.Size = new System.Drawing.Size(43, 13);
+            this.Conta1.TabIndex = 0;
+            this.Conta1.Text = "27+42=";
             // 
             // GbxMenu
             // 
@@ -141,7 +149,6 @@
             // 
             // GbxCalc
             // 
-            this.GbxCalc.Controls.Add(this.label1);
             this.GbxCalc.Controls.Add(this.Nmr3);
             this.GbxCalc.Controls.Add(this.Nmr2);
             this.GbxCalc.Controls.Add(this.Nmr6);
@@ -187,6 +194,8 @@
             // 
             // Nmr6
             // 
+            this.Nmr6.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr6.Location = new System.Drawing.Point(151, 106);
             this.Nmr6.Name = "Nmr6";
             this.Nmr6.Size = new System.Drawing.Size(66, 70);
@@ -196,6 +205,8 @@
             // 
             // Nmr9
             // 
+            this.Nmr9.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr9.Location = new System.Drawing.Point(151, 20);
             this.Nmr9.Name = "Nmr9";
             this.Nmr9.Size = new System.Drawing.Size(66, 70);
@@ -205,6 +216,8 @@
             // 
             // Nmr5
             // 
+            this.Nmr5.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr5.Location = new System.Drawing.Point(79, 106);
             this.Nmr5.Name = "Nmr5";
             this.Nmr5.Size = new System.Drawing.Size(66, 70);
@@ -214,6 +227,8 @@
             // 
             // Nmr8
             // 
+            this.Nmr8.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr8.Location = new System.Drawing.Point(79, 20);
             this.Nmr8.Name = "Nmr8";
             this.Nmr8.Size = new System.Drawing.Size(66, 70);
@@ -224,6 +239,8 @@
             // 
             // Nmr7
             // 
+            this.Nmr7.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr7.Location = new System.Drawing.Point(7, 20);
             this.Nmr7.Name = "Nmr7";
             this.Nmr7.Size = new System.Drawing.Size(66, 70);
@@ -242,6 +259,8 @@
             // 
             // NmrVirgula
             // 
+            this.NmrVirgula.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.NmrVirgula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.NmrVirgula.Location = new System.Drawing.Point(79, 291);
             this.NmrVirgula.Name = "NmrVirgula";
             this.NmrVirgula.Size = new System.Drawing.Size(66, 70);
@@ -251,6 +270,8 @@
             // 
             // Nmr0
             // 
+            this.Nmr0.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.Nmr0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Nmr0.Location = new System.Drawing.Point(7, 291);
             this.Nmr0.Name = "Nmr0";
             this.Nmr0.Size = new System.Drawing.Size(66, 70);
@@ -278,6 +299,8 @@
             // 
             // NmrMenos
             // 
+            this.NmrMenos.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.NmrMenos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.NmrMenos.Location = new System.Drawing.Point(250, 252);
             this.NmrMenos.Name = "NmrMenos";
             this.NmrMenos.Size = new System.Drawing.Size(111, 52);
@@ -287,6 +310,8 @@
             // 
             // NmrSoma
             // 
+            this.NmrSoma.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.NmrSoma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.NmrSoma.Location = new System.Drawing.Point(250, 194);
             this.NmrSoma.Name = "NmrSoma";
             this.NmrSoma.Size = new System.Drawing.Size(111, 52);
@@ -296,6 +321,8 @@
             // 
             // NmrDividir
             // 
+            this.NmrDividir.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.NmrDividir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.NmrDividir.Location = new System.Drawing.Point(250, 136);
             this.NmrDividir.Name = "NmrDividir";
             this.NmrDividir.Size = new System.Drawing.Size(111, 52);
@@ -314,6 +341,8 @@
             // 
             // NmrVezes
             // 
+            this.NmrVezes.BackgroundImage = global::ProjetoJogoCalc.Properties.Resources.lock_001;
+            this.NmrVezes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.NmrVezes.Location = new System.Drawing.Point(250, 78);
             this.NmrVezes.Name = "NmrVezes";
             this.NmrVezes.Size = new System.Drawing.Size(111, 52);
@@ -357,140 +386,14 @@
             this.GbxCalcTest.TabStop = false;
             this.GbxCalcTest.Text = "Calculadora de Teste";
             // 
-            // Test7
+            // TesteIgual
             // 
-            this.Test7.Location = new System.Drawing.Point(10, 134);
-            this.Test7.Name = "Test7";
-            this.Test7.Size = new System.Drawing.Size(51, 51);
-            this.Test7.TabIndex = 23;
-            this.Test7.Text = "7";
-            this.Test7.UseVisualStyleBackColor = true;
-            // 
-            // Test8
-            // 
-            this.Test8.Location = new System.Drawing.Point(67, 133);
-            this.Test8.Name = "Test8";
-            this.Test8.Size = new System.Drawing.Size(51, 51);
-            this.Test8.TabIndex = 24;
-            this.Test8.Text = "8";
-            this.Test8.UseVisualStyleBackColor = true;
-            // 
-            // Test9
-            // 
-            this.Test9.Location = new System.Drawing.Point(124, 135);
-            this.Test9.Name = "Test9";
-            this.Test9.Size = new System.Drawing.Size(51, 51);
-            this.Test9.TabIndex = 25;
-            this.Test9.Text = "9";
-            this.Test9.UseVisualStyleBackColor = true;
-            // 
-            // Test4
-            // 
-            this.Test4.Location = new System.Drawing.Point(10, 191);
-            this.Test4.Name = "Test4";
-            this.Test4.Size = new System.Drawing.Size(51, 51);
-            this.Test4.TabIndex = 26;
-            this.Test4.Text = "4";
-            this.Test4.UseVisualStyleBackColor = true;
-            // 
-            // Test5
-            // 
-            this.Test5.Location = new System.Drawing.Point(67, 190);
-            this.Test5.Name = "Test5";
-            this.Test5.Size = new System.Drawing.Size(51, 51);
-            this.Test5.TabIndex = 27;
-            this.Test5.Text = "5";
-            this.Test5.UseVisualStyleBackColor = true;
-            // 
-            // Test6
-            // 
-            this.Test6.Location = new System.Drawing.Point(124, 190);
-            this.Test6.Name = "Test6";
-            this.Test6.Size = new System.Drawing.Size(51, 51);
-            this.Test6.TabIndex = 28;
-            this.Test6.Text = "6";
-            this.Test6.UseVisualStyleBackColor = true;
-            // 
-            // Test1
-            // 
-            this.Test1.Location = new System.Drawing.Point(10, 250);
-            this.Test1.Name = "Test1";
-            this.Test1.Size = new System.Drawing.Size(51, 51);
-            this.Test1.TabIndex = 29;
-            this.Test1.Text = "1";
-            this.Test1.UseVisualStyleBackColor = true;
-            // 
-            // Test2
-            // 
-            this.Test2.Location = new System.Drawing.Point(67, 250);
-            this.Test2.Name = "Test2";
-            this.Test2.Size = new System.Drawing.Size(51, 51);
-            this.Test2.TabIndex = 30;
-            this.Test2.Text = "2";
-            this.Test2.UseVisualStyleBackColor = true;
-            // 
-            // Test3
-            // 
-            this.Test3.Location = new System.Drawing.Point(124, 250);
-            this.Test3.Name = "Test3";
-            this.Test3.Size = new System.Drawing.Size(51, 51);
-            this.Test3.TabIndex = 31;
-            this.Test3.Text = "3";
-            this.Test3.UseVisualStyleBackColor = true;
-            // 
-            // Test0
-            // 
-            this.Test0.Location = new System.Drawing.Point(10, 309);
-            this.Test0.Name = "Test0";
-            this.Test0.Size = new System.Drawing.Size(51, 51);
-            this.Test0.TabIndex = 32;
-            this.Test0.Text = "0";
-            this.Test0.UseVisualStyleBackColor = true;
-            // 
-            // TestVirgula
-            // 
-            this.TestVirgula.Location = new System.Drawing.Point(67, 309);
-            this.TestVirgula.Name = "TestVirgula";
-            this.TestVirgula.Size = new System.Drawing.Size(51, 51);
-            this.TestVirgula.TabIndex = 33;
-            this.TestVirgula.Text = ",";
-            this.TestVirgula.UseVisualStyleBackColor = true;
-            // 
-            // TestAC
-            // 
-            this.TestAC.Location = new System.Drawing.Point(211, 29);
-            this.TestAC.Name = "TestAC";
-            this.TestAC.Size = new System.Drawing.Size(51, 51);
-            this.TestAC.TabIndex = 34;
-            this.TestAC.Text = "AC";
-            this.TestAC.UseVisualStyleBackColor = true;
-            // 
-            // TestMult
-            // 
-            this.TestMult.Location = new System.Drawing.Point(211, 82);
-            this.TestMult.Name = "TestMult";
-            this.TestMult.Size = new System.Drawing.Size(51, 51);
-            this.TestMult.TabIndex = 35;
-            this.TestMult.Text = "X";
-            this.TestMult.UseVisualStyleBackColor = true;
-            // 
-            // TestDiv
-            // 
-            this.TestDiv.Location = new System.Drawing.Point(211, 139);
-            this.TestDiv.Name = "TestDiv";
-            this.TestDiv.Size = new System.Drawing.Size(51, 51);
-            this.TestDiv.TabIndex = 36;
-            this.TestDiv.Text = "/";
-            this.TestDiv.UseVisualStyleBackColor = true;
-            // 
-            // TestMais
-            // 
-            this.TestMais.Location = new System.Drawing.Point(211, 193);
-            this.TestMais.Name = "TestMais";
-            this.TestMais.Size = new System.Drawing.Size(51, 51);
-            this.TestMais.TabIndex = 37;
-            this.TestMais.Text = "+";
-            this.TestMais.UseVisualStyleBackColor = true;
+            this.TesteIgual.Location = new System.Drawing.Point(211, 307);
+            this.TesteIgual.Name = "TesteIgual";
+            this.TesteIgual.Size = new System.Drawing.Size(51, 51);
+            this.TesteIgual.TabIndex = 39;
+            this.TesteIgual.Text = "=";
+            this.TesteIgual.UseVisualStyleBackColor = true;
             // 
             // TestMenos
             // 
@@ -501,32 +404,140 @@
             this.TestMenos.Text = "-";
             this.TestMenos.UseVisualStyleBackColor = true;
             // 
-            // TesteIgual
+            // TestMais
             // 
-            this.TesteIgual.Location = new System.Drawing.Point(211, 307);
-            this.TesteIgual.Name = "TesteIgual";
-            this.TesteIgual.Size = new System.Drawing.Size(51, 51);
-            this.TesteIgual.TabIndex = 39;
-            this.TesteIgual.Text = "=";
-            this.TesteIgual.UseVisualStyleBackColor = true;
+            this.TestMais.Location = new System.Drawing.Point(211, 193);
+            this.TestMais.Name = "TestMais";
+            this.TestMais.Size = new System.Drawing.Size(51, 51);
+            this.TestMais.TabIndex = 37;
+            this.TestMais.Text = "+";
+            this.TestMais.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // TestDiv
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "label1";
+            this.TestDiv.Location = new System.Drawing.Point(211, 139);
+            this.TestDiv.Name = "TestDiv";
+            this.TestDiv.Size = new System.Drawing.Size(51, 51);
+            this.TestDiv.TabIndex = 36;
+            this.TestDiv.Text = "/";
+            this.TestDiv.UseVisualStyleBackColor = true;
             // 
-            // Conta1
+            // TestMult
             // 
-            this.Conta1.AutoSize = true;
-            this.Conta1.Location = new System.Drawing.Point(30, 36);
-            this.Conta1.Name = "Conta1";
-            this.Conta1.Size = new System.Drawing.Size(43, 13);
-            this.Conta1.TabIndex = 0;
-            this.Conta1.Text = "27+42=";
+            this.TestMult.Location = new System.Drawing.Point(211, 82);
+            this.TestMult.Name = "TestMult";
+            this.TestMult.Size = new System.Drawing.Size(51, 51);
+            this.TestMult.TabIndex = 35;
+            this.TestMult.Text = "X";
+            this.TestMult.UseVisualStyleBackColor = true;
+            // 
+            // TestAC
+            // 
+            this.TestAC.Location = new System.Drawing.Point(211, 29);
+            this.TestAC.Name = "TestAC";
+            this.TestAC.Size = new System.Drawing.Size(51, 51);
+            this.TestAC.TabIndex = 34;
+            this.TestAC.Text = "AC";
+            this.TestAC.UseVisualStyleBackColor = true;
+            // 
+            // TestVirgula
+            // 
+            this.TestVirgula.Location = new System.Drawing.Point(67, 309);
+            this.TestVirgula.Name = "TestVirgula";
+            this.TestVirgula.Size = new System.Drawing.Size(51, 51);
+            this.TestVirgula.TabIndex = 33;
+            this.TestVirgula.Text = ",";
+            this.TestVirgula.UseVisualStyleBackColor = true;
+            // 
+            // Test0
+            // 
+            this.Test0.Location = new System.Drawing.Point(10, 309);
+            this.Test0.Name = "Test0";
+            this.Test0.Size = new System.Drawing.Size(51, 51);
+            this.Test0.TabIndex = 32;
+            this.Test0.Text = "0";
+            this.Test0.UseVisualStyleBackColor = true;
+            // 
+            // Test3
+            // 
+            this.Test3.Location = new System.Drawing.Point(124, 250);
+            this.Test3.Name = "Test3";
+            this.Test3.Size = new System.Drawing.Size(51, 51);
+            this.Test3.TabIndex = 31;
+            this.Test3.Text = "3";
+            this.Test3.UseVisualStyleBackColor = true;
+            // 
+            // Test2
+            // 
+            this.Test2.Location = new System.Drawing.Point(67, 250);
+            this.Test2.Name = "Test2";
+            this.Test2.Size = new System.Drawing.Size(51, 51);
+            this.Test2.TabIndex = 30;
+            this.Test2.Text = "2";
+            this.Test2.UseVisualStyleBackColor = true;
+            // 
+            // Test1
+            // 
+            this.Test1.Location = new System.Drawing.Point(10, 250);
+            this.Test1.Name = "Test1";
+            this.Test1.Size = new System.Drawing.Size(51, 51);
+            this.Test1.TabIndex = 29;
+            this.Test1.Text = "1";
+            this.Test1.UseVisualStyleBackColor = true;
+            // 
+            // Test6
+            // 
+            this.Test6.Location = new System.Drawing.Point(124, 190);
+            this.Test6.Name = "Test6";
+            this.Test6.Size = new System.Drawing.Size(51, 51);
+            this.Test6.TabIndex = 28;
+            this.Test6.Text = "6";
+            this.Test6.UseVisualStyleBackColor = true;
+            // 
+            // Test5
+            // 
+            this.Test5.Location = new System.Drawing.Point(67, 190);
+            this.Test5.Name = "Test5";
+            this.Test5.Size = new System.Drawing.Size(51, 51);
+            this.Test5.TabIndex = 27;
+            this.Test5.Text = "5";
+            this.Test5.UseVisualStyleBackColor = true;
+            // 
+            // Test4
+            // 
+            this.Test4.Location = new System.Drawing.Point(10, 191);
+            this.Test4.Name = "Test4";
+            this.Test4.Size = new System.Drawing.Size(51, 51);
+            this.Test4.TabIndex = 26;
+            this.Test4.Text = "4";
+            this.Test4.UseVisualStyleBackColor = true;
+            // 
+            // Test9
+            // 
+            this.Test9.Location = new System.Drawing.Point(124, 135);
+            this.Test9.Name = "Test9";
+            this.Test9.Size = new System.Drawing.Size(51, 51);
+            this.Test9.TabIndex = 25;
+            this.Test9.Text = "9";
+            this.Test9.UseVisualStyleBackColor = true;
+            // 
+            // Test8
+            // 
+            this.Test8.Location = new System.Drawing.Point(67, 133);
+            this.Test8.Name = "Test8";
+            this.Test8.Size = new System.Drawing.Size(51, 51);
+            this.Test8.TabIndex = 24;
+            this.Test8.Text = "8";
+            this.Test8.UseVisualStyleBackColor = true;
+            // 
+            // Test7
+            // 
+            this.Test7.Location = new System.Drawing.Point(10, 134);
+            this.Test7.Name = "Test7";
+            this.Test7.Size = new System.Drawing.Size(51, 51);
+            this.Test7.TabIndex = 23;
+            this.Test7.Text = "7";
+            this.Test7.UseVisualStyleBackColor = true;
             // 
             // ProjetoJogoCalc
             // 
@@ -551,7 +562,6 @@
             this.GbxContas.PerformLayout();
             this.GbxMenu.ResumeLayout(false);
             this.GbxCalc.ResumeLayout(false);
-            this.GbxCalc.PerformLayout();
             this.GbxCalcTest.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -603,7 +613,6 @@
         private System.Windows.Forms.Button Test7;
         private System.Windows.Forms.Button TesteIgual;
         private System.Windows.Forms.Label Conta1;
-        private System.Windows.Forms.Label label1;
     }
 }
 
