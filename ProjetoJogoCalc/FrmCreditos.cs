@@ -16,5 +16,10 @@ namespace ProjetoJogoCalc
         {
             InitializeComponent();
         }
+
+        private void LblCreditos1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

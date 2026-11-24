@@ -38,17 +38,19 @@
             // 
             this.LblMenu.AutoSize = true;
             this.LblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMenu.Location = new System.Drawing.Point(181, 44);
+            this.LblMenu.Location = new System.Drawing.Point(136, 36);
+            this.LblMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblMenu.Name = "LblMenu";
-            this.LblMenu.Size = new System.Drawing.Size(417, 52);
+            this.LblMenu.Size = new System.Drawing.Size(334, 39);
             this.LblMenu.TabIndex = 0;
             this.LblMenu.Text = "Calculadora (In)Útil";
             // 
             // BtnIniciar
             // 
-            this.BtnIniciar.Location = new System.Drawing.Point(338, 191);
+            this.BtnIniciar.Location = new System.Drawing.Point(254, 155);
+            this.BtnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnIniciar.Name = "BtnIniciar";
-            this.BtnIniciar.Size = new System.Drawing.Size(104, 40);
+            this.BtnIniciar.Size = new System.Drawing.Size(78, 32);
             this.BtnIniciar.TabIndex = 1;
             this.BtnIniciar.Text = "Iniciar";
             this.BtnIniciar.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // BtnCreditos
             // 
-            this.BtnCreditos.Location = new System.Drawing.Point(338, 284);
+            this.BtnCreditos.Location = new System.Drawing.Point(254, 231);
+            this.BtnCreditos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCreditos.Name = "BtnCreditos";
-            this.BtnCreditos.Size = new System.Drawing.Size(104, 40);
+            this.BtnCreditos.Size = new System.Drawing.Size(78, 32);
             this.BtnCreditos.TabIndex = 2;
             this.BtnCreditos.Text = "Créditos";
             this.BtnCreditos.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Location = new System.Drawing.Point(338, 398);
+            this.BtnSair.Location = new System.Drawing.Point(254, 323);
+            this.BtnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(104, 40);
+            this.BtnSair.Size = new System.Drawing.Size(78, 32);
             this.BtnSair.TabIndex = 3;
             this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
@@ -76,15 +80,19 @@
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.BtnCreditos);
             this.Controls.Add(this.BtnIniciar);
             this.Controls.Add(this.LblMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();

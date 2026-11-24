@@ -29,7 +29,17 @@ namespace ProjetoJogoCalc
 
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = MessageBox.Show(
+          "Tem certeza de que deseja sair do jogo?",
+          "Sair do jogo",
+          MessageBoxButtons.YesNo,
+          MessageBoxIcon.Hand
+      );
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void BtnCreditos_Click(object sender, EventArgs e)
