@@ -24,7 +24,10 @@ namespace ProjetoJogoCalc
             ProjetoJogoCalc jogo = new ProjetoJogoCalc();
             jogo.ShowDialog();
 
-            this.Show();
+            if (!jogo.JogoConcluido)
+            {
+                this.Show();
+            }
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -50,6 +53,18 @@ namespace ProjetoJogoCalc
             creditos.ShowDialog();
 
             this.Show();
+        }
+
+        private void BtnComoJogarMenu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "COMO JOGAR\n\n" +
+        "Você possui uma Calculadora que está quebrada." +
+        "\n\n1-Conclua operações matemáticas para ganhar dinheiro\n\n2-Utilize esse dinheiro para consertar os botões quebrados\n\n3-Termine o jogo ao concluir todas as operações!",
+        "Como jogar!",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information
+    );
         }
     }
 }

@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.LblMenu = new System.Windows.Forms.Label();
             this.BtnIniciar = new System.Windows.Forms.Button();
             this.BtnCreditos = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnComoJogarMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblMenu
@@ -47,10 +49,10 @@
             // 
             // BtnIniciar
             // 
-            this.BtnIniciar.Location = new System.Drawing.Point(254, 155);
-            this.BtnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnIniciar.Location = new System.Drawing.Point(224, 101);
+            this.BtnIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIniciar.Name = "BtnIniciar";
-            this.BtnIniciar.Size = new System.Drawing.Size(78, 32);
+            this.BtnIniciar.Size = new System.Drawing.Size(138, 59);
             this.BtnIniciar.TabIndex = 1;
             this.BtnIniciar.Text = "Iniciar";
             this.BtnIniciar.UseVisualStyleBackColor = true;
@@ -58,10 +60,10 @@
             // 
             // BtnCreditos
             // 
-            this.BtnCreditos.Location = new System.Drawing.Point(254, 231);
-            this.BtnCreditos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCreditos.Location = new System.Drawing.Point(224, 227);
+            this.BtnCreditos.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreditos.Name = "BtnCreditos";
-            this.BtnCreditos.Size = new System.Drawing.Size(78, 32);
+            this.BtnCreditos.Size = new System.Drawing.Size(138, 59);
             this.BtnCreditos.TabIndex = 2;
             this.BtnCreditos.Text = "Créditos";
             this.BtnCreditos.UseVisualStyleBackColor = true;
@@ -69,14 +71,25 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Location = new System.Drawing.Point(254, 323);
-            this.BtnSair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSair.Location = new System.Drawing.Point(224, 297);
+            this.BtnSair.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(78, 32);
+            this.BtnSair.Size = new System.Drawing.Size(138, 58);
             this.BtnSair.TabIndex = 3;
             this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // BtnComoJogarMenu
+            // 
+            this.BtnComoJogarMenu.Location = new System.Drawing.Point(224, 164);
+            this.BtnComoJogarMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnComoJogarMenu.Name = "BtnComoJogarMenu";
+            this.BtnComoJogarMenu.Size = new System.Drawing.Size(138, 59);
+            this.BtnComoJogarMenu.TabIndex = 4;
+            this.BtnComoJogarMenu.Text = "Como Jogar";
+            this.BtnComoJogarMenu.UseVisualStyleBackColor = true;
+            this.BtnComoJogarMenu.Click += new System.EventHandler(this.BtnComoJogarMenu_Click);
             // 
             // FrmMenu
             // 
@@ -84,12 +97,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.BtnComoJogarMenu);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.BtnCreditos);
             this.Controls.Add(this.BtnIniciar);
             this.Controls.Add(this.LblMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -105,5 +120,6 @@
         private System.Windows.Forms.Button BtnIniciar;
         private System.Windows.Forms.Button BtnCreditos;
         private System.Windows.Forms.Button BtnSair;
+        private System.Windows.Forms.Button BtnComoJogarMenu;
     }
 }
