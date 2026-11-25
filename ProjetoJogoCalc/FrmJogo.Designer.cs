@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjetoJogoCalc));
             this.GbxContas = new System.Windows.Forms.GroupBox();
-            this.Conta1 = new System.Windows.Forms.Label();
+            this.TxtVisorPrincipal = new System.Windows.Forms.TextBox();
             this.GbxMenu = new System.Windows.Forms.GroupBox();
             this.BtnVoltarMenu = new System.Windows.Forms.Button();
             this.BtnMusica = new System.Windows.Forms.Button();
@@ -75,7 +75,8 @@
             this.Test9 = new System.Windows.Forms.Button();
             this.Test8 = new System.Windows.Forms.Button();
             this.Test7 = new System.Windows.Forms.Button();
-            this.TxtVisorPrincipal = new System.Windows.Forms.TextBox();
+            this.FlpEquacoes = new System.Windows.Forms.FlowLayoutPanel();
+            this.LblDinheiroAtual = new System.Windows.Forms.Label();
             this.GbxContas.SuspendLayout();
             this.GbxMenu.SuspendLayout();
             this.GbxCalc.SuspendLayout();
@@ -84,40 +85,44 @@
             // 
             // GbxContas
             // 
-            this.GbxContas.Controls.Add(this.TxtVisorPrincipal);
-            this.GbxContas.Controls.Add(this.Conta1);
+            this.GbxContas.Controls.Add(this.FlpEquacoes);
             this.GbxContas.Location = new System.Drawing.Point(12, 12);
             this.GbxContas.Name = "GbxContas";
-            this.GbxContas.Size = new System.Drawing.Size(641, 139);
+            this.GbxContas.Size = new System.Drawing.Size(641, 162);
             this.GbxContas.TabIndex = 0;
             this.GbxContas.TabStop = false;
             this.GbxContas.Text = "Equações:";
             // 
-            // Conta1
+            // TxtVisorPrincipal
             // 
-            this.Conta1.AutoSize = true;
-            this.Conta1.Location = new System.Drawing.Point(30, 36);
-            this.Conta1.Name = "Conta1";
-            this.Conta1.Size = new System.Drawing.Size(43, 13);
-            this.Conta1.TabIndex = 0;
-            this.Conta1.Text = "27+42=";
+            this.TxtVisorPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtVisorPrincipal.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtVisorPrincipal.Location = new System.Drawing.Point(151, 316);
+            this.TxtVisorPrincipal.Name = "TxtVisorPrincipal";
+            this.TxtVisorPrincipal.ReadOnly = true;
+            this.TxtVisorPrincipal.Size = new System.Drawing.Size(93, 34);
+            this.TxtVisorPrincipal.TabIndex = 42;
+            this.TxtVisorPrincipal.TabStop = false;
+            this.TxtVisorPrincipal.Text = "0";
+            this.TxtVisorPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // GbxMenu
             // 
+            this.GbxMenu.Controls.Add(this.LblDinheiroAtual);
             this.GbxMenu.Controls.Add(this.BtnVoltarMenu);
             this.GbxMenu.Controls.Add(this.BtnMusica);
             this.GbxMenu.Controls.Add(this.BtnRegras);
             this.GbxMenu.Controls.Add(this.button1);
             this.GbxMenu.Location = new System.Drawing.Point(659, 12);
             this.GbxMenu.Name = "GbxMenu";
-            this.GbxMenu.Size = new System.Drawing.Size(132, 518);
+            this.GbxMenu.Size = new System.Drawing.Size(132, 535);
             this.GbxMenu.TabIndex = 1;
             this.GbxMenu.TabStop = false;
             this.GbxMenu.Text = "Menu";
             // 
             // BtnVoltarMenu
             // 
-            this.BtnVoltarMenu.Location = new System.Drawing.Point(19, 430);
+            this.BtnVoltarMenu.Location = new System.Drawing.Point(19, 447);
             this.BtnVoltarMenu.Name = "BtnVoltarMenu";
             this.BtnVoltarMenu.Size = new System.Drawing.Size(97, 82);
             this.BtnVoltarMenu.TabIndex = 3;
@@ -127,7 +132,7 @@
             // 
             // BtnMusica
             // 
-            this.BtnMusica.Location = new System.Drawing.Point(19, 304);
+            this.BtnMusica.Location = new System.Drawing.Point(19, 324);
             this.BtnMusica.Name = "BtnMusica";
             this.BtnMusica.Size = new System.Drawing.Size(97, 82);
             this.BtnMusica.TabIndex = 2;
@@ -136,7 +141,7 @@
             // 
             // BtnRegras
             // 
-            this.BtnRegras.Location = new System.Drawing.Point(19, 216);
+            this.BtnRegras.Location = new System.Drawing.Point(19, 240);
             this.BtnRegras.Name = "BtnRegras";
             this.BtnRegras.Size = new System.Drawing.Size(97, 82);
             this.BtnRegras.TabIndex = 1;
@@ -156,6 +161,7 @@
             // 
             // GbxCalc
             // 
+            this.GbxCalc.Controls.Add(this.TxtVisorPrincipal);
             this.GbxCalc.Controls.Add(this.Nmr3);
             this.GbxCalc.Controls.Add(this.Nmr2);
             this.GbxCalc.Controls.Add(this.Nmr6);
@@ -174,7 +180,7 @@
             this.GbxCalc.Controls.Add(this.Nmr1);
             this.GbxCalc.Controls.Add(this.NmrVezes);
             this.GbxCalc.Controls.Add(this.NmrDEL);
-            this.GbxCalc.Location = new System.Drawing.Point(12, 157);
+            this.GbxCalc.Location = new System.Drawing.Point(12, 180);
             this.GbxCalc.Name = "GbxCalc";
             this.GbxCalc.Size = new System.Drawing.Size(367, 367);
             this.GbxCalc.TabIndex = 1;
@@ -407,7 +413,7 @@
             this.GbxCalcTest.Controls.Add(this.Test9);
             this.GbxCalcTest.Controls.Add(this.Test8);
             this.GbxCalcTest.Controls.Add(this.Test7);
-            this.GbxCalcTest.Location = new System.Drawing.Point(385, 157);
+            this.GbxCalcTest.Location = new System.Drawing.Point(385, 174);
             this.GbxCalcTest.Name = "GbxCalcTest";
             this.GbxCalcTest.Size = new System.Drawing.Size(268, 373);
             this.GbxCalcTest.TabIndex = 1;
@@ -610,24 +616,34 @@
             this.Test7.UseVisualStyleBackColor = true;
             this.Test7.Click += new System.EventHandler(this.BtnNumero_Click);
             // 
-            // TxtVisorPrincipal
+            // FlpEquacoes
             // 
-            this.TxtVisorPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtVisorPrincipal.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtVisorPrincipal.Location = new System.Drawing.Point(0, 91);
-            this.TxtVisorPrincipal.Name = "TxtVisorPrincipal";
-            this.TxtVisorPrincipal.ReadOnly = true;
-            this.TxtVisorPrincipal.Size = new System.Drawing.Size(165, 34);
-            this.TxtVisorPrincipal.TabIndex = 42;
-            this.TxtVisorPrincipal.TabStop = false;
-            this.TxtVisorPrincipal.Text = "0";
-            this.TxtVisorPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.FlpEquacoes.AutoScroll = true;
+            this.FlpEquacoes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlpEquacoes.Location = new System.Drawing.Point(7, 19);
+            this.FlpEquacoes.Name = "FlpEquacoes";
+            this.FlpEquacoes.Size = new System.Drawing.Size(628, 137);
+            this.FlpEquacoes.TabIndex = 43;
+            this.FlpEquacoes.WrapContents = false;
+            // 
+            // LblDinheiroAtual
+            // 
+            this.LblDinheiroAtual.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LblDinheiroAtual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblDinheiroAtual.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDinheiroAtual.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LblDinheiroAtual.Location = new System.Drawing.Point(19, 189);
+            this.LblDinheiroAtual.Name = "LblDinheiroAtual";
+            this.LblDinheiroAtual.Size = new System.Drawing.Size(96, 45);
+            this.LblDinheiroAtual.TabIndex = 4;
+            this.LblDinheiroAtual.Text = "Dinheiro atual:\r\nR$ 10000\r\n";
+            this.LblDinheiroAtual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ProjetoJogoCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 542);
+            this.ClientSize = new System.Drawing.Size(806, 559);
             this.ControlBox = false;
             this.Controls.Add(this.GbxCalcTest);
             this.Controls.Add(this.GbxCalc);
@@ -644,9 +660,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProjetoJogoCalc_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.GbxContas.ResumeLayout(false);
-            this.GbxContas.PerformLayout();
             this.GbxMenu.ResumeLayout(false);
             this.GbxCalc.ResumeLayout(false);
+            this.GbxCalc.PerformLayout();
             this.GbxCalcTest.ResumeLayout(false);
             this.GbxCalcTest.PerformLayout();
             this.ResumeLayout(false);
@@ -698,10 +714,11 @@
         private System.Windows.Forms.Button Test8;
         private System.Windows.Forms.Button Test7;
         private System.Windows.Forms.Button TesteIgual;
-        private System.Windows.Forms.Label Conta1;
         private System.Windows.Forms.TextBox TxtVisorTeste;
         private System.Windows.Forms.TextBox TxtExpressao;
         private System.Windows.Forms.TextBox TxtVisorPrincipal;
+        private System.Windows.Forms.FlowLayoutPanel FlpEquacoes;
+        private System.Windows.Forms.Label LblDinheiroAtual;
     }
 }
 

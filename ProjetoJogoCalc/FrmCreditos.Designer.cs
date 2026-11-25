@@ -33,7 +33,15 @@
             this.LblCreditos = new System.Windows.Forms.Label();
             this.GbxCreditos = new System.Windows.Forms.GroupBox();
             this.LblCreditos3 = new System.Windows.Forms.Label();
+            this.LblTituloConquistas = new System.Windows.Forms.Label();
+            this.PicConquista = new System.Windows.Forms.PictureBox();
+            this.LblNomeConquista = new System.Windows.Forms.Label();
+            this.LblDescricaoConquista = new System.Windows.Forms.Label();
+            this.LblStatusConquista = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.GbxCreditos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicConquista)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblCreditos1
@@ -63,6 +71,7 @@
             // GbxCreditos
             // 
             this.GbxCreditos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.GbxCreditos.Controls.Add(this.panel1);
             this.GbxCreditos.Controls.Add(this.LblCreditos3);
             this.GbxCreditos.Controls.Add(this.LblCreditos1);
             this.GbxCreditos.Controls.Add(this.LblCreditos);
@@ -83,6 +92,65 @@
             this.LblCreditos3.TabIndex = 2;
             this.LblCreditos3.Text = "Jogo desenvolvido como trabalho para a matéria \r\nProgramação Visual e Jogos\r\n";
             // 
+            // LblTituloConquistas
+            // 
+            this.LblTituloConquistas.AutoSize = true;
+            this.LblTituloConquistas.Location = new System.Drawing.Point(3, 0);
+            this.LblTituloConquistas.Name = "LblTituloConquistas";
+            this.LblTituloConquistas.Size = new System.Drawing.Size(94, 21);
+            this.LblTituloConquistas.TabIndex = 3;
+            this.LblTituloConquistas.Text = "Conquistas";
+            // 
+            // PicConquista
+            // 
+            this.PicConquista.Image = global::ProjetoJogoCalc.Properties.Resources.calc;
+            this.PicConquista.Location = new System.Drawing.Point(7, 51);
+            this.PicConquista.Name = "PicConquista";
+            this.PicConquista.Size = new System.Drawing.Size(100, 116);
+            this.PicConquista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicConquista.TabIndex = 4;
+            this.PicConquista.TabStop = false;
+            // 
+            // LblNomeConquista
+            // 
+            this.LblNomeConquista.AutoSize = true;
+            this.LblNomeConquista.Location = new System.Drawing.Point(113, 51);
+            this.LblNomeConquista.Name = "LblNomeConquista";
+            this.LblNomeConquista.Size = new System.Drawing.Size(111, 21);
+            this.LblNomeConquista.TabIndex = 5;
+            this.LblNomeConquista.Text = "Colecionador";
+            // 
+            // LblDescricaoConquista
+            // 
+            this.LblDescricaoConquista.AutoSize = true;
+            this.LblDescricaoConquista.Location = new System.Drawing.Point(113, 72);
+            this.LblDescricaoConquista.Name = "LblDescricaoConquista";
+            this.LblDescricaoConquista.Size = new System.Drawing.Size(326, 21);
+            this.LblDescricaoConquista.TabIndex = 6;
+            this.LblDescricaoConquista.Text = "Compre todos os itens disponíveis na loja";
+            // 
+            // LblStatusConquista
+            // 
+            this.LblStatusConquista.AutoSize = true;
+            this.LblStatusConquista.Location = new System.Drawing.Point(113, 146);
+            this.LblStatusConquista.Name = "LblStatusConquista";
+            this.LblStatusConquista.Size = new System.Drawing.Size(91, 21);
+            this.LblStatusConquista.TabIndex = 7;
+            this.LblStatusConquista.Text = "Bloqueada";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.LblTituloConquistas);
+            this.panel1.Controls.Add(this.LblStatusConquista);
+            this.panel1.Controls.Add(this.PicConquista);
+            this.panel1.Controls.Add(this.LblDescricaoConquista);
+            this.panel1.Controls.Add(this.LblNomeConquista);
+            this.panel1.Location = new System.Drawing.Point(7, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(470, 184);
+            this.panel1.TabIndex = 8;
+            // 
             // FrmCreditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +164,9 @@
             this.Text = "Créditos";
             this.GbxCreditos.ResumeLayout(false);
             this.GbxCreditos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicConquista)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +177,11 @@
         private System.Windows.Forms.Label LblCreditos;
         private System.Windows.Forms.GroupBox GbxCreditos;
         private System.Windows.Forms.Label LblCreditos3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LblTituloConquistas;
+        private System.Windows.Forms.Label LblStatusConquista;
+        private System.Windows.Forms.PictureBox PicConquista;
+        private System.Windows.Forms.Label LblDescricaoConquista;
+        private System.Windows.Forms.Label LblNomeConquista;
     }
 }

@@ -34,6 +34,10 @@
             this.BtnCreditos = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
             this.BtnComoJogarMenu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // LblMenu
@@ -91,12 +95,34 @@
             this.BtnComoJogarMenu.UseVisualStyleBackColor = true;
             this.BtnComoJogarMenu.Click += new System.EventHandler(this.BtnComoJogarMenu_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoJogoCalc.Properties.Resources.calc;
+            this.pictureBox1.Location = new System.Drawing.Point(436, 101);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 212);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjetoJogoCalc.Properties.Resources.calc;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 101);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(152, 212);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnComoJogarMenu);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.BtnCreditos);
@@ -109,6 +135,8 @@
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +149,7 @@
         private System.Windows.Forms.Button BtnCreditos;
         private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.Button BtnComoJogarMenu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -19,10 +19,40 @@ namespace ProjetoJogoCalc
         decimal PrimeiroNumeroTeste = 0;
         string OperadorTeste = "";
         bool NovoNumeroTeste = true;
+        private void BloquearTecla(Button botao)
+        {
+            botao.Text = "";
+            botao.BackgroundImage = Properties.Resources.lock_001;
+            botao.BackgroundImageLayout = ImageLayout.Stretch;
+            botao.Enabled = false;
+        }
         public bool JogoConcluido { get; private set; } = false;
 
+        private void AtualizarEstadoTeclas()
+        {
+            foreach (Control controle in ObterControles(this))
+            {
+                if (controle is Button botao && botao.Tag != null)
+                {
+                    string tecla = botao.Tag.ToString();
 
-
+                    if (EstadoJogo.TeclasDesbloqueadas.Contains(tecla))
+                    {
+                        DesbloquearTecla(botao);
+                    }
+                    else
+                    {
+                        BloquearTecla(botao);
+                    }
+                }
+            }
+        }
+        #region Saldo
+        public void AtualizarSaldo()
+        {
+            LblDinheiroAtual.Text = "Dinheiro atual:\n" + EstadoJogo.Dinheiro.ToString("C2", CultureInfo.GetCultureInfo("pt-BR") );
+        }
+        #endregion
         #region identificarBotao
         private void BtnNumeroPrincipal_Click(object sender, EventArgs e)
         {
@@ -131,7 +161,7 @@ namespace ProjetoJogoCalc
             if (respostaJogador == equacaoAtual.Resposta)
             {
                 MessageBox.Show(
-                    "Resposta correta!",
+                    "Resposta correta!\n\nVocê ganhou " + EstadoJogo.RecompensaPorQuestao.ToString("C2", CultureInfo.GetCultureInfo("pt-BR")) + "!",
                     "Parabéns",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
@@ -141,6 +171,8 @@ namespace ProjetoJogoCalc
 
                 EstadoJogo.Dinheiro += EstadoJogo.RecompensaPorQuestao;
                 EstadoJogo.EquacaoAtual++;
+                AtualizarExibicaoEquacoes();
+                AtualizarSaldo();
 
                 TxtVisorPrincipal.Text = "0";
                 NovoNumeroPrincipal = true;
@@ -155,9 +187,11 @@ namespace ProjetoJogoCalc
                         MessageBoxIcon.Information
                     );
 
-                    EstadoJogo.EtapaAtual++;
 
+                    EstadoJogo.EtapaAtual++;
                     EstadoJogo.EquacaoAtual = 0;
+                    AtualizarExibicaoEquacoes();
+
 
                     if (EstadoJogo.EtapaAtual >= EstadoJogo.Etapas.Count)
                     {
@@ -201,6 +235,74 @@ namespace ProjetoJogoCalc
 
                 TxtVisorPrincipal.Text = "0";
                 NovoNumeroPrincipal = true;
+            }
+        }
+        #endregion
+        #region exibir equações
+        private void AtualizarExibicaoEquacoes()
+        {
+            // Limpa as equações exibidas anteriormente
+            FlpEquacoes.Controls.Clear();
+            if (EstadoJogo.EtapaAtual >= EstadoJogo.Etapas.Count)
+            {
+                return;
+            }
+
+            // Obtém a etapa atual
+            Etapa etapaAtual =
+                EstadoJogo.Etapas[EstadoJogo.EtapaAtual];
+
+            // Percorre todas as equações da etapa
+            for (int i = 0; i < etapaAtual.Equacoes.Count; i++)
+            {
+                Equacao equacao = etapaAtual.Equacoes[i];
+
+                Label lblEquacao = new Label();
+
+                lblEquacao.Width = FlpEquacoes.ClientSize.Width - 25;
+                lblEquacao.Height = 30;
+
+                lblEquacao.Font = new Font(
+                    "Segoe UI",
+                    12,
+                    FontStyle.Regular
+                );
+
+                lblEquacao.TextAlign = ContentAlignment.MiddleLeft;
+
+                // Verifica se a equação já foi concluída
+                if (equacao.Concluida)
+                {
+                    lblEquacao.Text =
+                        "✓ " + equacao.Enunciado.Replace(
+                            "?",
+                            equacao.Resposta.ToString(
+                                CultureInfo.GetCultureInfo("pt-BR")
+                            )
+                        );
+
+                    lblEquacao.ForeColor = Color.Green;
+                }
+                else if (i == EstadoJogo.EquacaoAtual)
+                {
+                    // Destaca a equação atual
+                    lblEquacao.Text = "▶ " + equacao.Enunciado;
+
+                    lblEquacao.BackColor = Color.LightBlue;
+                    lblEquacao.Font = new Font(
+                        "Segoe UI",
+                        12,
+                        FontStyle.Bold
+                    );
+                }
+                else
+                {
+                    // Equações que ainda não foram resolvidas
+                    lblEquacao.Text = equacao.Enunciado;
+                    lblEquacao.ForeColor = Color.Gray;
+                }
+
+                FlpEquacoes.Controls.Add(lblEquacao);
             }
         }
         #endregion
@@ -281,7 +383,9 @@ namespace ProjetoJogoCalc
             {
                Nmr7, Nmr8, Nmr9, Nmr4, Nmr5, Nmr6, Nmr1, Nmr2, Nmr3, Nmr0,
             };
-            
+            AtualizarEstadoTeclas();
+            AtualizarExibicaoEquacoes();
+            AtualizarSaldo();
 
         }
 
@@ -310,10 +414,10 @@ namespace ProjetoJogoCalc
         private void BtnVoltarMenu_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show(
-       "Tem certeza de que deseja voltar ao menu?\n\nTodo o progresso desta partida será perdido!",
-       "Abandonar partida",
+       "Tem certeza de que deseja voltar ao menu?\n\nTodo o progresso desta partida será salvo.",
+       "Abandonar partida...",
        MessageBoxButtons.YesNo,
-       MessageBoxIcon.Warning
+       MessageBoxIcon.Question
    );
 
             if (resultado == DialogResult.Yes)
@@ -396,7 +500,7 @@ namespace ProjetoJogoCalc
         {
             if (loja == null || loja.IsDisposed)
             {
-                loja = new FrmLoja();
+                loja = new FrmLoja(this);
             }
 
             loja.Show();
@@ -420,7 +524,35 @@ namespace ProjetoJogoCalc
             botao.Text = botao.Tag.ToString();
             botao.Image = null;
             botao.Enabled = true;
+            botao.BackgroundImage = null;
         }
-        
+        public void DesbloquearTeclaPorTag(string tecla)
+        {
+            foreach (Control controle in ObterControles(this))
+            {
+                if (controle is Button botao &&
+                    botao.Tag != null &&
+                    botao.Tag.ToString() == tecla)
+                {
+                    DesbloquearTecla(botao);
+                    EstadoJogo.TeclasDesbloqueadas.Add(tecla);
+                    return;
+                }
+            }
+        }
+
+        private IEnumerable<Control> ObterControles(Control controle)
+        {
+            foreach (Control filho in controle.Controls)
+            {
+                yield return filho;
+
+                foreach (Control descendente in ObterControles(filho))
+                {
+                    yield return descendente;
+                }
+            }
+        }
+
     }
 }
