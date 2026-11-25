@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjetoJogoCalc));
             this.GbxContas = new System.Windows.Forms.GroupBox();
+            this.FlpEquacoes = new System.Windows.Forms.FlowLayoutPanel();
             this.TxtVisorPrincipal = new System.Windows.Forms.TextBox();
             this.GbxMenu = new System.Windows.Forms.GroupBox();
+            this.LblDinheiroAtual = new System.Windows.Forms.Label();
             this.BtnVoltarMenu = new System.Windows.Forms.Button();
             this.BtnMusica = new System.Windows.Forms.Button();
             this.BtnRegras = new System.Windows.Forms.Button();
@@ -75,8 +77,6 @@
             this.Test9 = new System.Windows.Forms.Button();
             this.Test8 = new System.Windows.Forms.Button();
             this.Test7 = new System.Windows.Forms.Button();
-            this.FlpEquacoes = new System.Windows.Forms.FlowLayoutPanel();
-            this.LblDinheiroAtual = new System.Windows.Forms.Label();
             this.GbxContas.SuspendLayout();
             this.GbxMenu.SuspendLayout();
             this.GbxCalc.SuspendLayout();
@@ -92,6 +92,16 @@
             this.GbxContas.TabIndex = 0;
             this.GbxContas.TabStop = false;
             this.GbxContas.Text = "Equações:";
+            // 
+            // FlpEquacoes
+            // 
+            this.FlpEquacoes.AutoScroll = true;
+            this.FlpEquacoes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlpEquacoes.Location = new System.Drawing.Point(7, 19);
+            this.FlpEquacoes.Name = "FlpEquacoes";
+            this.FlpEquacoes.Size = new System.Drawing.Size(628, 137);
+            this.FlpEquacoes.TabIndex = 43;
+            this.FlpEquacoes.WrapContents = false;
             // 
             // TxtVisorPrincipal
             // 
@@ -120,6 +130,19 @@
             this.GbxMenu.TabStop = false;
             this.GbxMenu.Text = "Menu";
             // 
+            // LblDinheiroAtual
+            // 
+            this.LblDinheiroAtual.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LblDinheiroAtual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblDinheiroAtual.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDinheiroAtual.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LblDinheiroAtual.Location = new System.Drawing.Point(19, 189);
+            this.LblDinheiroAtual.Name = "LblDinheiroAtual";
+            this.LblDinheiroAtual.Size = new System.Drawing.Size(96, 45);
+            this.LblDinheiroAtual.TabIndex = 4;
+            this.LblDinheiroAtual.Text = "Dinheiro atual:\r\nR$ 10000\r\n";
+            this.LblDinheiroAtual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BtnVoltarMenu
             // 
             this.BtnVoltarMenu.Location = new System.Drawing.Point(19, 447);
@@ -138,6 +161,7 @@
             this.BtnMusica.TabIndex = 2;
             this.BtnMusica.Text = "Música";
             this.BtnMusica.UseVisualStyleBackColor = true;
+            this.BtnMusica.Click += new System.EventHandler(this.BtnMusica_Click);
             // 
             // BtnRegras
             // 
@@ -615,29 +639,6 @@
             this.Test7.Text = "7";
             this.Test7.UseVisualStyleBackColor = true;
             this.Test7.Click += new System.EventHandler(this.BtnNumero_Click);
-            // 
-            // FlpEquacoes
-            // 
-            this.FlpEquacoes.AutoScroll = true;
-            this.FlpEquacoes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.FlpEquacoes.Location = new System.Drawing.Point(7, 19);
-            this.FlpEquacoes.Name = "FlpEquacoes";
-            this.FlpEquacoes.Size = new System.Drawing.Size(628, 137);
-            this.FlpEquacoes.TabIndex = 43;
-            this.FlpEquacoes.WrapContents = false;
-            // 
-            // LblDinheiroAtual
-            // 
-            this.LblDinheiroAtual.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.LblDinheiroAtual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LblDinheiroAtual.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDinheiroAtual.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblDinheiroAtual.Location = new System.Drawing.Point(19, 189);
-            this.LblDinheiroAtual.Name = "LblDinheiroAtual";
-            this.LblDinheiroAtual.Size = new System.Drawing.Size(96, 45);
-            this.LblDinheiroAtual.TabIndex = 4;
-            this.LblDinheiroAtual.Text = "Dinheiro atual:\r\nR$ 10000\r\n";
-            this.LblDinheiroAtual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ProjetoJogoCalc
             // 

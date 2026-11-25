@@ -8,12 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using NAudio.Wave;
+using System.IO;
 
 namespace ProjetoJogoCalc
 {
 
     public partial class ProjetoJogoCalc : Form
     {
+        private AudioFileReader leitorAudio;
+        private WaveOutEvent reprodutorAudio;
+        private bool musicaAtiva = true;
+        private void IniciarMusica()
+        {
+            string caminhoMusica = Path.Combine(
+       Application.StartupPath,
+       "Audio",
+       "MusicaFini.mpeg"
+   );
+
+            leitorAudio = new AudioFileReader(caminhoMusica);
+            reprodutorAudio = new WaveOutEvent();
+
+            reprodutorAudio.Init(leitorAudio);
+
+            reprodutorAudio.PlaybackStopped += (s, e) =>
+            {
+                if (musicaAtiva && reprodutorAudio != null)
+                {
+                    leitorAudio.Position = 0;
+                    reprodutorAudio.Play();
+                }
+            };
+
+            reprodutorAudio.Play();
+        }
+        private void PararMusica()
+        {
+            if (reprodutorAudio != null)
+            {
+                reprodutorAudio.Stop();
+                reprodutorAudio.Dispose();
+                reprodutorAudio = null;
+            }
+
+            if (leitorAudio != null)
+            {
+                leitorAudio.Dispose();
+                leitorAudio = null;
+            }
+        }
+        private void AtualizarBotaoMusica()
+        {
+            BtnMusica.Text = musicaAtiva ? "Música: ON" : "Música: OFF";
+        }
         private bool NovoNumeroPrincipal = true;
         private Button[] TeclasCalculadora;
         decimal PrimeiroNumeroTeste = 0;
@@ -379,6 +427,12 @@ namespace ProjetoJogoCalc
         public ProjetoJogoCalc()
         {
             InitializeComponent();
+            this.FormClosing += (s, e) =>
+            {
+                PararMusica();
+            };
+            IniciarMusica();
+            AtualizarBotaoMusica();
             TeclasCalculadora = new Button[]
             {
                Nmr7, Nmr8, Nmr9, Nmr4, Nmr5, Nmr6, Nmr1, Nmr2, Nmr3, Nmr0,
@@ -554,5 +608,20 @@ namespace ProjetoJogoCalc
             }
         }
 
+        private void BtnMusica_Click(object sender, EventArgs e)
+        {
+            musicaAtiva = !musicaAtiva;
+
+            if (musicaAtiva)
+            {
+                reprodutorAudio.Play();
+            }
+            else
+            {
+                reprodutorAudio.Pause();
+            }
+
+            AtualizarBotaoMusica();
+        }
     }
 }
